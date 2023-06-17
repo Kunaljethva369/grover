@@ -61,7 +61,7 @@ picture {
   }
 }
 body {
-  height: 200vh;
+  height: 150vh;
 }
 
 .container {
@@ -78,7 +78,8 @@ body {
 header {
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid hsl(227, 12%, 61%);
+  background: #FDECEC;
+  z-index: 1;
 }
 
 .nav {
@@ -162,5 +163,231 @@ header {
   }
   .nav .hamburger {
     display: block;
+  }
+}
+.hero {
+  padding-top: 8rem;
+}
+.hero .heroLeftSide {
+  width: 44%;
+}
+.hero .heroLeftSide .heroTagLine {
+  background: #FDECEC;
+  border-radius: 23px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.hero .heroLeftSide .heroTagLine span {
+  font-size: 0.8rem;
+  line-height: 16px;
+  color: #F55556;
+  align-self: center;
+}
+.hero .heroLeftSide .mainHeading {
+  font-size: 64px;
+  font-weight: 700;
+  color: #2E2E2E;
+  margin-bottom: 1.2rem;
+}
+.hero .heroLeftSide .mainHeading span {
+  color: #F55556;
+}
+.hero .heroLeftSide .heroSubheading {
+  font-size: 20px;
+  color: hsl(227, 12%, 61%);
+}
+.hero .heroLeftSide .heroBtn {
+  margin-top: 3rem;
+}
+.hero .heroLeftSide .heroBtn .firstbtn {
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background-color: #F55556;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+.hero .heroLeftSide .heroBtn .secondbtn {
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background-color: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  margin-left: 1.8rem;
+  border: 1px solid #F55556;
+}
+.hero .heroRightSide {
+  width: 56%;
+  position: relative;
+}
+.hero .heroRightSide .chef {
+  position: absolute;
+  right: 100px;
+  top: -300px;
+}
+.hero .heroRightSide .way {
+  position: absolute;
+  right: 10px;
+  top: -110px;
+}
+.hero .heroRightSide .delivery {
+  position: absolute;
+  right: 50px;
+  top: -150px;
+}
+.hero .heroRightSide .delivery .deliveryTagline {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: 1.2rem;
+}
+.hero .heroRightSide .delivery .deliveryTagline p:last-child {
+  font-size: 0.8rem;
+  color: hsl(227, 12%, 61%);
+}
+.hero .heroRightSide .orangeCart {
+  position: absolute;
+  top: -240px;
+  left: 80px;
+  text-align: center;
+  background-color: #FDECEC;
+  border-radius: 12px;
+}
+.hero .heroRightSide .orangeCart .orangeContent {
+  position: relative;
+  height: 122px;
+}
+.hero .heroRightSide .orangeCart .orangeContent .orangeTitle {
+  margin: 10px auto;
+  font-size: 0.9rem;
+}
+.hero .heroRightSide .orangeCart .orangeContent .orangeTitle img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  width: 50px;
+  height: 4px;
+  border-radius: 30px;
+}
+.hero .heroRightSide .orangeCart .orangeContent p:nth-child(3) {
+  font-size: 0.8rem;
+  color: hsl(227, 12%, 61%);
+}
+.hero .heroRightSide .orangeCart .orangeContent .orangeAddCart img {
+  position: absolute;
+  left: 20px;
+  top: 54px;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .hero {
+    padding: 5rem 1rem;
+  }
+  .hero .heroLeftSide {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero .heroLeftSide .heroTagLine {
+    margin: 10px auto;
+  }
+  .hero .heroLeftSide .mainHeading {
+    font-size: 25px;
+  }
+  .hero .heroLeftSide .heroSubheading {
+    font-size: 16px;
+  }
+  .hero .heroLeftSide .heroBtn {
+    margin: 2rem auto;
+    justify-content: center;
+  }
+  .hero .heroLeftSide .heroBtn .firstbtn,
+  .hero .heroLeftSide .heroBtn .secondbtn {
+    padding: 0.5rem 0.9rem;
+  }
+  .hero .heroRightSide .chef {
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .hero .heroRightSide .chef img {
+    width: 45%;
+    margin: 0px auto;
+  }
+  .hero .heroRightSide .way {
+    right: 16px;
+    top: -4px;
+  }
+  .hero .heroRightSide .delivery {
+    right: 80px;
+    top: -40px;
+  }
+  .hero .heroRightSide .orangeCart {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    margin: 0px auto;
+  }
+  .hero .heroRightSide .orangeCart img {
+    height: 77px;
+  }
+  .hero .heroRightSide .orangeCart .orangeContent .orangeAddCart img {
+    left: 10px;
+    top: 78px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .hero {
+    padding: 5rem 1rem;
+  }
+  .hero .heroSection {
+    flex-direction: column;
+  }
+  .hero .heroLeftSide {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero .heroLeftSide .heroTagLine {
+    margin: 10px auto;
+  }
+  .hero .heroLeftSide .mainHeading {
+    font-size: 25px;
+  }
+  .hero .heroLeftSide .heroSubheading {
+    font-size: 16px;
+  }
+  .hero .heroLeftSide .heroBtn {
+    margin: 2rem auto;
+    justify-content: center;
+  }
+  .hero .heroLeftSide .heroBtn .firstbtn,
+  .hero .heroLeftSide .heroBtn .secondbtn {
+    padding: 0.5rem 0.9rem;
+  }
+  .hero .heroRightSide {
+    width: 100%;
+  }
+  .hero .heroRightSide .chef {
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .hero .heroRightSide .chef img {
+    width: 70%;
+    margin: 0px auto;
+  }
+  .hero .heroRightSide .way {
+    right: 0px;
+    top: 0px;
+  }
+  .hero .heroRightSide .delivery {
+    right: 50px;
+    top: -30px;
+  }
+  .hero .heroRightSide .orangeCart {
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    margin: 0px auto;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -63,14 +63,15 @@ picture {
 }
 
 body {
-    height: 200vh;
+    height: 150vh;
 }
 
 // Reset CSS End
 
 // Color
 
-$primary-heading-color: hsl(228, 39%, 23%);
+// $primary-heading-color: hsl(228, 39%, 23%);
+$primary-heading-color: #2E2E2E;
 $background-orange: hsl(12, 88%, 59%);
 $primiary-description-color: hsl(227, 12%, 61%);
 $font-family: 'Be Vietnam Pro', sans-serif;
@@ -88,10 +89,14 @@ $font-family: 'Be Vietnam Pro', sans-serif;
     align-items: center;
 }
 
+
+// Header Start
 header {
     position: fixed;
     width: 100%;
-    border-bottom: 1px solid $primiary-description-color;
+    // border-bottom: 1px solid $primiary-description-color;
+    background: #FDECEC;
+    z-index: 1;
 }
 
 .nav {
@@ -156,6 +161,7 @@ header {
 
 }
 
+
 // Only for Nav Response
 @media only screen and (min-width:767px) and (max-width:1340px) {
     .nav {
@@ -201,3 +207,294 @@ header {
         }
     }
 }
+
+// Header End
+
+// Hero Start
+
+@mixin button($bgColor, $color) {
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    background-color: $bgColor;
+    border: none;
+    border-radius: .5rem;
+    color: $color;
+}
+
+.hero {
+    padding-top: 8rem;
+
+    .heroLeftSide {
+        width: 44%;
+
+        .heroTagLine {
+            background: #FDECEC;
+            border-radius: 23px;
+            width: max-content;
+
+            span {
+                font-size: .8rem;
+                line-height: 16px;
+                color: #F55556;
+                align-self: center;
+            }
+        }
+
+        .mainHeading {
+            font-size: 64px;
+            font-weight: 700;
+            color: $primary-heading-color;
+
+            span {
+                color: #F55556;
+            }
+
+            margin-bottom: 1.2rem;
+        }
+
+        .heroSubheading {
+            font-size: 20px;
+            color: $primiary-description-color;
+        }
+
+        .heroBtn {
+            margin-top: 3rem;
+
+            .firstbtn {
+                @include button(#F55556, white);
+            }
+
+            .secondbtn {
+                @include button(none, black);
+                margin-left: 1.8rem;
+                border: 1px solid #F55556;
+            }
+        }
+    }
+
+    .heroRightSide {
+        width: 56%;
+        position: relative;
+
+        .chef {
+            position: absolute;
+            right: 100px;
+            top: -300px;
+        }
+
+        .way {
+            position: absolute;
+            right: 10px;
+            top: -110px;
+        }
+
+        .delivery {
+            position: absolute;
+            right: 50px;
+            top: -150px;
+
+            .deliveryTagline {
+                font-size: 1.2rem;
+                text-align: left;
+                margin-left: 1.2rem;
+
+                p:last-child {
+                    font-size: .8rem;
+                    color: $primiary-description-color;
+                }
+            }
+        }
+
+        .orangeCart {
+            position: absolute;
+            top: -240px;
+            left: 80px;
+            text-align: center;
+            background-color: #FDECEC;
+            border-radius: 12px;
+
+            .orangeContent {
+                position: relative;
+                height: 122px;
+
+                .orangeTitle {
+                    margin: 10px auto;
+                    font-size: .9rem;
+
+                    img {
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 0.5rem;
+                        width: 50px;
+                        height: 4px;
+                        border-radius: 30px;
+                    }
+                }
+
+                p:nth-child(3) {
+                    font-size: .8rem;
+                    color: $primiary-description-color;
+                }
+
+                .orangeAddCart {
+                    img {
+                        position: absolute;
+                        left: 20px;
+                        top: 54px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:767px) and (max-width:1024px) {
+    .hero {
+        padding: 5rem 1rem;
+
+        .heroLeftSide {
+            // width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            .heroTagLine {
+                margin: 10px auto;
+            }
+
+            .mainHeading {
+                font-size: 25px;
+            }
+
+            .heroSubheading {
+                font-size: 16px;
+            }
+
+            .heroBtn {
+                margin: 2rem auto;
+                justify-content: center;
+
+                .firstbtn,
+                .secondbtn {
+                    padding: 0.5rem .9rem;
+                }
+            }
+        }
+
+        .heroRightSide {
+            // width: 100%;
+
+            .chef {
+                position: relative;
+                top: 0px;
+                right: 0px;
+
+                img {
+                    width: 45%;
+                    margin: 0px auto;
+                }
+            }
+
+            .way {
+                right: 16px;
+                top: -4px;
+            }
+
+            .delivery {
+                right: 80px;
+                top: -40px;
+            }
+
+            .orangeCart {
+                position: absolute;
+                left: 50px;
+                top: 200px;
+                margin: 0px auto;
+
+                img {
+                    height: 77px;
+                }
+
+                .orangeContent {
+                    .orangeAddCart {
+                        img {
+                            left: 10px;
+                            top: 78px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:766px) {
+    .hero {
+        padding: 5rem 1rem;
+
+        .heroSection {
+            flex-direction: column;
+        }
+
+        .heroLeftSide {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            .heroTagLine {
+                margin: 10px auto;
+            }
+
+            .mainHeading {
+                font-size: 25px;
+            }
+
+            .heroSubheading {
+                font-size: 16px;
+            }
+
+            .heroBtn {
+                margin: 2rem auto;
+                justify-content: center;
+
+                .firstbtn,
+                .secondbtn {
+                    padding: 0.5rem .9rem;
+                }
+            }
+        }
+
+        .heroRightSide {
+            width: 100%;
+
+            .chef {
+                position: relative;
+                top: 0px;
+                right: 0px;
+
+                img {
+                    width: 70%;
+                    margin: 0px auto;
+                }
+            }
+
+            .way {
+                right: 0px;
+                top: 0px;
+            }
+
+            .delivery {
+                right: 50px;
+                top: -30px;
+            }
+
+            .orangeCart {
+                position: absolute;
+                left: 0px;
+                top: 300px;
+                margin: 0px auto;
+            }
+        }
+    }
+}
+
+// Hero End

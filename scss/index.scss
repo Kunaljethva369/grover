@@ -62,10 +62,6 @@ picture {
     }
 }
 
-body {
-    height: 150vh;
-}
-
 // Reset CSS End
 
 // Color
@@ -94,8 +90,7 @@ $font-family: 'Be Vietnam Pro', sans-serif;
 header {
     position: fixed;
     width: 100%;
-    // border-bottom: 1px solid $primiary-description-color;
-    background: #FDECEC;
+    background-color: #ffff;
     z-index: 1;
 }
 
@@ -157,10 +152,12 @@ header {
     .cross {
         display: none;
         cursor: pointer;
+        z-index: 3;
+        background-color: white;
+        border-radius: 2rem;
     }
 
 }
-
 
 // Only for Nav Response
 @media only screen and (min-width:767px) and (max-width:1340px) {
@@ -180,17 +177,23 @@ header {
 
         .menu.active {
             display: block;
-
+            
             .menu-ul {
                 position: fixed;
                 top: 45%;
                 left: 50%;
                 flex-direction: column;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -45%);
                 text-align: center;
-                background-color: rgba(182, 182, 182, 0.6);
-                padding: 3.8rem;
-                border-radius: 1rem;
+                background-color: rgba(61, 61, 61, 0.8);
+                padding: 4rem;
+                height: 100vh;
+                width: 100%;
+                z-index: 2;
+                li a{
+                    color: white;
+                }
+                justify-content: center;
             }
         }
 
@@ -215,7 +218,7 @@ header {
 @mixin button($bgColor, $color) {
     cursor: pointer;
     padding: 1.2rem 2rem;
-    background-color: $bgColor;
+    background: $bgColor;
     border: none;
     border-radius: .5rem;
     color: $color;
@@ -231,12 +234,13 @@ header {
             background: #FDECEC;
             border-radius: 23px;
             width: max-content;
-
+            padding: 0rem .4rem;
+            img{
+                height: 35px;
+            }
             span {
                 font-size: .8rem;
-                line-height: 16px;
                 color: #F55556;
-                align-self: center;
             }
         }
 
@@ -246,6 +250,7 @@ header {
             color: $primary-heading-color;
 
             span {
+                font-weight: 500;
                 color: #F55556;
             }
 
@@ -275,85 +280,14 @@ header {
     .heroRightSide {
         width: 56%;
         position: relative;
-
-        .chef {
-            position: absolute;
-            right: 100px;
-            top: -300px;
-        }
-
-        .way {
-            position: absolute;
-            right: 10px;
-            top: -110px;
-        }
-
-        .delivery {
-            position: absolute;
-            right: 50px;
-            top: -150px;
-
-            .deliveryTagline {
-                font-size: 1.2rem;
-                text-align: left;
-                margin-left: 1.2rem;
-
-                p:last-child {
-                    font-size: .8rem;
-                    color: $primiary-description-color;
-                }
-            }
-        }
-
-        .orangeCart {
-            position: absolute;
-            top: -240px;
-            left: 80px;
-            text-align: center;
-            background-color: #FDECEC;
-            border-radius: 12px;
-
-            .orangeContent {
-                position: relative;
-                height: 122px;
-
-                .orangeTitle {
-                    margin: 10px auto;
-                    font-size: .9rem;
-
-                    img {
-                        margin-left: auto;
-                        margin-right: auto;
-                        margin-top: 0.5rem;
-                        width: 50px;
-                        height: 4px;
-                        border-radius: 30px;
-                    }
-                }
-
-                p:nth-child(3) {
-                    font-size: .8rem;
-                    color: $primiary-description-color;
-                }
-
-                .orangeAddCart {
-                    img {
-                        position: absolute;
-                        left: 20px;
-                        top: 54px;
-                    }
-                }
-            }
-        }
     }
 }
 
-@media only screen and (min-width:767px) and (max-width:1024px) {
+@media only screen and (min-width:767px) and (max-width:1100px) {
     .hero {
         padding: 5rem 1rem;
 
         .heroLeftSide {
-            // width: 100%;
             text-align: center;
             margin-bottom: 2rem;
 
@@ -380,50 +314,7 @@ header {
             }
         }
 
-        .heroRightSide {
-            // width: 100%;
-
-            .chef {
-                position: relative;
-                top: 0px;
-                right: 0px;
-
-                img {
-                    width: 45%;
-                    margin: 0px auto;
-                }
-            }
-
-            .way {
-                right: 16px;
-                top: -4px;
-            }
-
-            .delivery {
-                right: 80px;
-                top: -40px;
-            }
-
-            .orangeCart {
-                position: absolute;
-                left: 50px;
-                top: 200px;
-                margin: 0px auto;
-
-                img {
-                    height: 77px;
-                }
-
-                .orangeContent {
-                    .orangeAddCart {
-                        img {
-                            left: 10px;
-                            top: 78px;
-                        }
-                    }
-                }
-            }
-        }
+        .heroRightSide {}
     }
 }
 
@@ -465,36 +356,315 @@ header {
 
         .heroRightSide {
             width: 100%;
-
-            .chef {
-                position: relative;
-                top: 0px;
-                right: 0px;
-
-                img {
-                    width: 70%;
-                    margin: 0px auto;
-                }
-            }
-
-            .way {
-                right: 0px;
-                top: 0px;
-            }
-
-            .delivery {
-                right: 50px;
-                top: -30px;
-            }
-
-            .orangeCart {
-                position: absolute;
-                left: 0px;
-                top: 300px;
-                margin: 0px auto;
-            }
         }
     }
 }
 
 // Hero End
+
+// What we server Start
+
+.serverSection {
+    margin-top: 4rem;
+    flex-direction: column;
+
+    .serverHeading {
+        text-align: center;
+        text-transform: capitalize;
+        margin: 0px auto;
+
+        p {
+            color: #F55556;
+            font-size: 1.1rem;
+            line-height: 40px;
+        }
+
+        h2 {
+            color: $primary-heading-color;
+            width: 50%;
+            margin: 0px auto;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+    }
+
+    .serverCards {
+        margin: 4rem 0rem;
+        gap: 50px;
+        justify-content: center;
+
+        .cards {
+            width: 30.33%;
+            height: 310px;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                margin: 0px auto;
+                height: 90px;
+            }
+
+            .cardsContent {
+                text-align: center;
+                width: 70%;
+                margin: 0px auto;
+
+                .cardHeading {
+                    margin-bottom: 1rem;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .card-orange {
+            background-color: #FDECEC;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 0px 20px 20px 20px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #F55556;
+                height: 320px;
+                width: 100%;
+                top: 0px;
+                right: -20px;
+                border-radius: 0px 20px 20px 20px;
+                z-index: -1;
+                transform: rotate(-3deg);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:992px) {
+    .serverSection {
+        padding: 0rem 1rem;
+
+        .serverHeading {
+            h2 {
+                font-size: 1.8rem;
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .serverSection {
+        padding: 0rem 1rem;
+
+        .serverHeading {
+            h2 {
+                font-size: 25px;
+                width: 90%;
+            }
+        }
+
+        .serverCards {
+            display: block !important;
+
+            .cards {
+                width: 90% !important;
+                margin: 0px auto;
+            }
+
+            .card-orange {
+                &::after {
+                    transform: rotate(0deg);
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
+
+// What we server End
+
+// Why choose us Start
+
+.chooseUsSection {
+    .chooseUsLeftSide {
+        width: 60%;
+    }
+
+    .chooseUsRightSide {
+        width: 40%;
+
+        .chooseUsTagline {
+            color: #03A66B;
+            text-transform: uppercase;
+            margin-bottom: .5rem;
+            font-size: .9rem;
+        }
+
+        .chooseUsHeading {
+            font-size: 40px;
+            font-weight: 700;
+            color: $primary-heading-color;
+            margin-bottom: 1rem;
+        }
+
+        .chooseUsDescription {
+            font-size: 20px;
+            color: $primiary-description-color;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            @include button(#F55556, white)
+        }
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:992px) {
+    .chooseUsSection {
+        padding: 0rem 1rem;
+
+        .chooseUsRightSide {
+
+            .chooseUsHeading {
+                font-size: 1.8rem;
+            }
+
+            .chooseUsDescription {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 0.5rem 0.9rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .chooseUsSection {
+        padding: 0rem 1rem;
+        flex-direction: column;
+
+        .chooseUsLeftSide {
+            width: 100%;
+            order: 2;
+        }
+
+        .chooseUsRightSide {
+            width: 100%;
+            order: 1;
+            text-align: center;
+
+            .chooseUsHeading {
+                font-size: 25px;
+            }
+
+            .chooseUsDescription {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 0.5rem 0.9rem;
+            }
+        }
+    }
+}
+
+// Why choose us End
+
+// Home Delivary Start
+
+.homeSection {
+    .homeRightSide {
+        width: 60%;
+
+        img {
+            margin-left: auto;
+        }
+    }
+
+    .homeLeftSide {
+        width: 40%;
+
+        .homeTagline {
+            color: #F9BA45;
+            text-transform: uppercase;
+            margin-bottom: .5rem;
+            font-size: .9rem;
+        }
+
+        .homeHeading {
+            font-size: 40px;
+            font-weight: 700;
+            color: $primary-heading-color;
+            margin-bottom: 1rem;
+        }
+
+        .homeDescription {
+            font-size: 20px;
+            color: $primiary-description-color;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            @include button(none, black);
+            border: 1px solid #F55556;
+        }
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:992px) {
+    .homeSection {
+        padding: 2rem 1rem;
+
+        .homeLeftSide {
+
+            .homeHeading {
+                font-size: 1.8rem;
+            }
+
+            .homeDescription {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 0.5rem 0.9rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .homeSection {
+        padding: 2rem 1rem;
+        flex-direction: column;
+
+        .homeRightSide {
+            width: 100%;
+            order: 1;
+        }
+
+        .homeLeftSide {
+            width: 100%;
+            order: 2;
+            text-align: center;
+
+            .homeHeading {
+                font-size: 25px;
+            }
+
+            .homeDescription {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 0.5rem 0.9rem;
+            }
+        }
+    }
+}
+
+// Home Delivary End

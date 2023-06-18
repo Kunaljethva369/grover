@@ -9,12 +9,13 @@ hamburger.addEventListener('click', function () {
     menu.className == 'menu active' ? ul.className = 'flex menu-ul' : ul.className = 'flex menu-ul'
 
     hamburger.style.display = 'none';
-
+    document.body.style.overflow = 'hidden';
     cross.style.display = 'flex'
 });
 
 cross.addEventListener('click', function () {
     menu.className == 'menu active' ? menu.className = 'menu' : ''
     hamburger.style.display = 'flex';
-    cross.style.display = 'none'
+    document.body.style.overflow = 'auto';
+    cross.style.display = 'none';
 });

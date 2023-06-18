@@ -60,10 +60,6 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-body {
-  height: 150vh;
-}
-
 .container {
   max-width: 1270px;
   margin: 0px auto;
@@ -78,7 +74,7 @@ body {
 header {
   position: fixed;
   width: 100%;
-  background: #FDECEC;
+  background-color: white;
   z-index: 1;
 }
 
@@ -129,6 +125,9 @@ header {
 .nav .cross {
   display: none;
   cursor: pointer;
+  z-index: 3;
+  background-color: white;
+  border-radius: 2rem;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1340px) {
@@ -151,11 +150,17 @@ header {
     top: 45%;
     left: 50%;
     flex-direction: column;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     text-align: center;
-    background-color: rgba(182, 182, 182, 0.6);
-    padding: 3.8rem;
-    border-radius: 1rem;
+    background-color: rgba(61, 61, 61, 0.8);
+    padding: 4rem;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    justify-content: center;
+  }
+  .nav .menu.active .menu-ul li a {
+    color: white;
   }
   .nav .search span {
     padding-left: 0.5rem;
@@ -176,12 +181,14 @@ header {
   border-radius: 23px;
   width: -moz-max-content;
   width: max-content;
+  padding: 0rem 0.4rem;
+}
+.hero .heroLeftSide .heroTagLine img {
+  height: 35px;
 }
 .hero .heroLeftSide .heroTagLine span {
   font-size: 0.8rem;
-  line-height: 16px;
   color: #F55556;
-  align-self: center;
 }
 .hero .heroLeftSide .mainHeading {
   font-size: 64px;
@@ -190,6 +197,7 @@ header {
   margin-bottom: 1.2rem;
 }
 .hero .heroLeftSide .mainHeading span {
+  font-weight: 500;
   color: #F55556;
 }
 .hero .heroLeftSide .heroSubheading {
@@ -202,7 +210,7 @@ header {
 .hero .heroLeftSide .heroBtn .firstbtn {
   cursor: pointer;
   padding: 1.2rem 2rem;
-  background-color: #F55556;
+  background: #F55556;
   border: none;
   border-radius: 0.5rem;
   color: white;
@@ -210,7 +218,7 @@ header {
 .hero .heroLeftSide .heroBtn .secondbtn {
   cursor: pointer;
   padding: 1.2rem 2rem;
-  background-color: none;
+  background: none;
   border: none;
   border-radius: 0.5rem;
   color: black;
@@ -221,65 +229,8 @@ header {
   width: 56%;
   position: relative;
 }
-.hero .heroRightSide .chef {
-  position: absolute;
-  right: 100px;
-  top: -300px;
-}
-.hero .heroRightSide .way {
-  position: absolute;
-  right: 10px;
-  top: -110px;
-}
-.hero .heroRightSide .delivery {
-  position: absolute;
-  right: 50px;
-  top: -150px;
-}
-.hero .heroRightSide .delivery .deliveryTagline {
-  font-size: 1.2rem;
-  text-align: left;
-  margin-left: 1.2rem;
-}
-.hero .heroRightSide .delivery .deliveryTagline p:last-child {
-  font-size: 0.8rem;
-  color: hsl(227, 12%, 61%);
-}
-.hero .heroRightSide .orangeCart {
-  position: absolute;
-  top: -240px;
-  left: 80px;
-  text-align: center;
-  background-color: #FDECEC;
-  border-radius: 12px;
-}
-.hero .heroRightSide .orangeCart .orangeContent {
-  position: relative;
-  height: 122px;
-}
-.hero .heroRightSide .orangeCart .orangeContent .orangeTitle {
-  margin: 10px auto;
-  font-size: 0.9rem;
-}
-.hero .heroRightSide .orangeCart .orangeContent .orangeTitle img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.5rem;
-  width: 50px;
-  height: 4px;
-  border-radius: 30px;
-}
-.hero .heroRightSide .orangeCart .orangeContent p:nth-child(3) {
-  font-size: 0.8rem;
-  color: hsl(227, 12%, 61%);
-}
-.hero .heroRightSide .orangeCart .orangeContent .orangeAddCart img {
-  position: absolute;
-  left: 20px;
-  top: 54px;
-}
 
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
+@media only screen and (min-width: 767px) and (max-width: 1100px) {
   .hero {
     padding: 5rem 1rem;
   }
@@ -303,36 +254,6 @@ header {
   .hero .heroLeftSide .heroBtn .firstbtn,
   .hero .heroLeftSide .heroBtn .secondbtn {
     padding: 0.5rem 0.9rem;
-  }
-  .hero .heroRightSide .chef {
-    position: relative;
-    top: 0px;
-    right: 0px;
-  }
-  .hero .heroRightSide .chef img {
-    width: 45%;
-    margin: 0px auto;
-  }
-  .hero .heroRightSide .way {
-    right: 16px;
-    top: -4px;
-  }
-  .hero .heroRightSide .delivery {
-    right: 80px;
-    top: -40px;
-  }
-  .hero .heroRightSide .orangeCart {
-    position: absolute;
-    left: 50px;
-    top: 200px;
-    margin: 0px auto;
-  }
-  .hero .heroRightSide .orangeCart img {
-    height: 77px;
-  }
-  .hero .heroRightSide .orangeCart .orangeContent .orangeAddCart img {
-    left: 10px;
-    top: 78px;
   }
 }
 @media only screen and (max-width: 766px) {
@@ -367,27 +288,245 @@ header {
   .hero .heroRightSide {
     width: 100%;
   }
-  .hero .heroRightSide .chef {
-    position: relative;
-    top: 0px;
-    right: 0px;
+}
+.serverSection {
+  margin-top: 4rem;
+  flex-direction: column;
+}
+.serverSection .serverHeading {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0px auto;
+}
+.serverSection .serverHeading p {
+  color: #F55556;
+  font-size: 1.1rem;
+  line-height: 40px;
+}
+.serverSection .serverHeading h2 {
+  color: #2E2E2E;
+  width: 50%;
+  margin: 0px auto;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.serverSection .serverCards {
+  margin: 4rem 0rem;
+  gap: 50px;
+  justify-content: center;
+}
+.serverSection .serverCards .cards {
+  width: 30.33%;
+  height: 310px;
+  flex-direction: column;
+  justify-content: center;
+}
+.serverSection .serverCards .cards img {
+  margin: 0px auto;
+  height: 90px;
+}
+.serverSection .serverCards .cards .cardsContent {
+  text-align: center;
+  width: 70%;
+  margin: 0px auto;
+}
+.serverSection .serverCards .cards .cardsContent .cardHeading {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.serverSection .serverCards .card-orange {
+  background-color: #FDECEC;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0px 20px 20px 20px;
+  position: relative;
+}
+.serverSection .serverCards .card-orange::after {
+  content: "";
+  position: absolute;
+  background-color: #F55556;
+  height: 320px;
+  width: 100%;
+  top: 0px;
+  right: -20px;
+  border-radius: 0px 20px 20px 20px;
+  z-index: -1;
+  transform: rotate(-3deg);
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .serverSection {
+    padding: 0rem 1rem;
   }
-  .hero .heroRightSide .chef img {
+  .serverSection .serverHeading h2 {
+    font-size: 1.8rem;
     width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .serverSection {
+    padding: 0rem 1rem;
+  }
+  .serverSection .serverHeading h2 {
+    font-size: 25px;
+    width: 90%;
+  }
+  .serverSection .serverCards {
+    display: block !important;
+  }
+  .serverSection .serverCards .cards {
+    width: 90% !important;
     margin: 0px auto;
   }
-  .hero .heroRightSide .way {
-    right: 0px;
-    top: 0px;
+  .serverSection .serverCards .card-orange::after {
+    transform: rotate(0deg);
+    border-radius: 20px;
   }
-  .hero .heroRightSide .delivery {
-    right: 50px;
-    top: -30px;
+}
+.chooseUsSection .chooseUsLeftSide {
+  width: 60%;
+}
+.chooseUsSection .chooseUsRightSide {
+  width: 40%;
+}
+.chooseUsSection .chooseUsRightSide .chooseUsTagline {
+  color: #03A66B;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.chooseUsSection .chooseUsRightSide .chooseUsHeading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2E2E2E;
+  margin-bottom: 1rem;
+}
+.chooseUsSection .chooseUsRightSide .chooseUsDescription {
+  font-size: 20px;
+  color: hsl(227, 12%, 61%);
+  margin-bottom: 1rem;
+}
+.chooseUsSection .chooseUsRightSide button {
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background: #F55556;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .chooseUsSection {
+    padding: 0rem 1rem;
   }
-  .hero .heroRightSide .orangeCart {
-    position: absolute;
-    left: 0px;
-    top: 300px;
-    margin: 0px auto;
+  .chooseUsSection .chooseUsRightSide .chooseUsHeading {
+    font-size: 1.8rem;
+  }
+  .chooseUsSection .chooseUsRightSide .chooseUsDescription {
+    font-size: 16px;
+  }
+  .chooseUsSection .chooseUsRightSide button {
+    padding: 0.5rem 0.9rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .chooseUsSection {
+    padding: 0rem 1rem;
+    flex-direction: column;
+  }
+  .chooseUsSection .chooseUsLeftSide {
+    width: 100%;
+    order: 2;
+  }
+  .chooseUsSection .chooseUsRightSide {
+    width: 100%;
+    order: 1;
+    text-align: center;
+  }
+  .chooseUsSection .chooseUsRightSide .chooseUsHeading {
+    font-size: 25px;
+  }
+  .chooseUsSection .chooseUsRightSide .chooseUsDescription {
+    font-size: 16px;
+  }
+  .chooseUsSection .chooseUsRightSide button {
+    padding: 0.5rem 0.9rem;
+  }
+}
+.homeSection .homeRightSide {
+  width: 60%;
+}
+.homeSection .homeRightSide img {
+  margin-left: auto;
+}
+.homeSection .homeLeftSide {
+  width: 40%;
+}
+.homeSection .homeLeftSide .homeTagline {
+  color: #F9BA45;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.homeSection .homeLeftSide .homeHeading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2E2E2E;
+  margin-bottom: 1rem;
+}
+.homeSection .homeLeftSide .homeDescription {
+  font-size: 20px;
+  color: hsl(227, 12%, 61%);
+  margin-bottom: 1rem;
+}
+.homeSection .homeLeftSide button {
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  border: 1px solid #F55556;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .homeSection {
+    padding: 2rem 1rem;
+  }
+  .homeSection .homeLeftSide .homeHeading {
+    font-size: 1.8rem;
+  }
+  .homeSection .homeLeftSide .homeDescription {
+    font-size: 16px;
+  }
+  .homeSection .homeLeftSide button {
+    padding: 0.5rem 0.9rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .homeSection {
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+  .homeSection .homeRightSide {
+    width: 100%;
+    order: 1;
+  }
+  .homeSection .homeLeftSide {
+    width: 100%;
+    order: 2;
+    text-align: center;
+  }
+  .homeSection .homeLeftSide .homeHeading {
+    font-size: 25px;
+  }
+  .homeSection .homeLeftSide .homeDescription {
+    font-size: 16px;
+  }
+  .homeSection .homeLeftSide button {
+    padding: 0.5rem 0.9rem;
   }
 }/*# sourceMappingURL=index.css.map */

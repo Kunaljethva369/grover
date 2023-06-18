@@ -529,4 +529,96 @@ header {
   .homeSection .homeLeftSide button {
     padding: 0.5rem 0.9rem;
   }
+}
+.appStoreSection {
+  padding: 2rem 0rem;
+}
+.appStoreSection .appStoreLeftSide {
+  width: 50%;
+}
+.appStoreSection .appStoreLeftSide img {
+  margin: 0px auto;
+}
+.appStoreSection .appStoreRightSide {
+  width: 50%;
+}
+.appStoreSection .appStoreRightSide .homeTagline {
+  color: #F55556;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.appStoreSection .appStoreRightSide .homeHeading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2E2E2E;
+  margin-bottom: 1rem;
+}
+.appStoreSection .appStoreRightSide .homeDescription {
+  font-size: 20px;
+  color: hsl(227, 12%, 61%);
+  margin-bottom: 1rem;
+}
+.appStoreSection .appStoreRightSide .ctaStore {
+  gap: 52px;
+}
+.appStoreSection .appStoreRightSide .ctaStore .appStore,
+.appStoreSection .appStoreRightSide .ctaStore .playStore {
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+.appStoreSection .appStoreRightSide .ctaStore .appStore img,
+.appStoreSection .appStoreRightSide .ctaStore .playStore img {
+  margin-right: 0.5rem;
+}
+.appStoreSection .appStoreRightSide .ctaStore .appStore span,
+.appStoreSection .appStoreRightSide .ctaStore .playStore span {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .appStoreSection {
+    padding: 2rem 1rem;
+  }
+  .appStoreSection .appStoreLeftSide .homeHeading {
+    font-size: 1.8rem;
+  }
+  .appStoreSection .appStoreLeftSide .homeDescription {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .appStoreSection {
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+  .appStoreSection .appStoreLeftSide {
+    width: 100%;
+    order: 1;
+  }
+  .appStoreSection .appStoreRightSide {
+    width: 100%;
+    order: 2;
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+  .appStoreSection .appStoreRightSide .homeHeading {
+    font-size: 25px;
+  }
+  .appStoreSection .appStoreRightSide .homeDescription {
+    font-size: 16px;
+  }
+  .appStoreSection .appStoreRightSide .ctaStore {
+    justify-content: center;
+  }
+  .appStoreSection .appStoreRightSide .ctaStore .appStore,
+  .appStoreSection .appStoreRightSide .ctaStore .playStore {
+    padding: 0.5rem 0.9rem;
+  }
 }/*# sourceMappingURL=index.css.map */

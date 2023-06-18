@@ -177,7 +177,7 @@ header {
 
         .menu.active {
             display: block;
-            
+
             .menu-ul {
                 position: fixed;
                 top: 45%;
@@ -190,9 +190,11 @@ header {
                 height: 100vh;
                 width: 100%;
                 z-index: 2;
-                li a{
+
+                li a {
                     color: white;
                 }
+
                 justify-content: center;
             }
         }
@@ -235,9 +237,11 @@ header {
             border-radius: 23px;
             width: max-content;
             padding: 0rem .4rem;
-            img{
+
+            img {
                 height: 35px;
             }
+
             span {
                 font-size: .8rem;
                 color: #F55556;
@@ -313,8 +317,6 @@ header {
                 }
             }
         }
-
-        .heroRightSide {}
     }
 }
 
@@ -668,3 +670,115 @@ header {
 }
 
 // Home Delivary End
+
+// App Store Start
+
+.appStoreSection {
+    padding: 2rem 0rem;
+
+    .appStoreLeftSide {
+        width: 50%;
+
+        img {
+            margin: 0px auto;
+        }
+    }
+
+    .appStoreRightSide {
+        width: 50%;
+
+        .homeTagline {
+            color: #F55556;
+            text-transform: uppercase;
+            margin-bottom: .5rem;
+            font-size: .9rem;
+        }
+
+        .homeHeading {
+            font-size: 40px;
+            font-weight: 700;
+            color: $primary-heading-color;
+            margin-bottom: 1rem;
+        }
+
+        .homeDescription {
+            font-size: 20px;
+            color: $primiary-description-color;
+            margin-bottom: 1rem;
+        }
+
+        .ctaStore {
+            gap: 52px;
+
+            .appStore,
+            .playStore {
+                @include button(none, black);
+                border: 1px solid black;
+                border-radius: .5rem;
+
+                img {
+                    margin-right: .5rem;
+                }
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:992px) {
+    .appStoreSection {
+        padding: 2rem 1rem;
+
+        .appStoreLeftSide {
+
+            .homeHeading {
+                font-size: 1.8rem;
+            }
+
+            .homeDescription {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .appStoreSection {
+        padding: 2rem 1rem;
+        flex-direction: column;
+
+        .appStoreLeftSide {
+            width: 100%;
+            order: 1;
+        }
+
+        .appStoreRightSide {
+            width: 100%;
+            order: 2;
+            text-align: center;
+            margin-top: 1.2rem;
+
+            .homeHeading {
+                font-size: 25px;
+            }
+
+            .homeDescription {
+                font-size: 16px;
+            }
+
+            .ctaStore {
+                justify-content: center;
+
+                .appStore,
+                .playStore {
+                    padding: 0.5rem 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+// App Store End

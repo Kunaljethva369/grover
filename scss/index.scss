@@ -718,6 +718,7 @@ header {
 
                 img {
                     margin-right: .5rem;
+                    width: 22px;
                 }
 
                 span {
@@ -733,6 +734,10 @@ header {
         padding: 2rem 1rem;
 
         .appStoreLeftSide {
+
+            img {
+                width: 200px;
+            }
 
             .homeHeading {
                 font-size: 1.8rem;
@@ -753,6 +758,10 @@ header {
         .appStoreLeftSide {
             width: 100%;
             order: 1;
+
+            img {
+                width: 70px;
+            }
         }
 
         .appStoreRightSide {
@@ -782,3 +791,96 @@ header {
 }
 
 // App Store End
+
+// Footer Start
+
+.footerSection {
+    padding: 8rem 0rem 2rem 0rem;
+    align-items: flex-start;
+
+    .footer1 {
+        width: 60%;
+
+        img {
+            width: 90px;
+            margin-bottom: 0.9rem;
+        }
+
+        p {
+            color: $primiary-description-color;
+        }
+    }
+
+    .footerTags {
+        width: 100%;
+        justify-content: center;
+
+        .footer2,
+        .footer3 {
+            margin-right: 4rem;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                color: $primiary-description-color;
+                margin-top: .5rem;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    p {
+        color: $primiary-description-color;
+        margin-top: .5rem;
+    }
+}
+
+.footerCaption {
+    padding: 0rem 0rem 2rem 0rem;
+    justify-content: space-between;
+
+    div {
+        color: $primiary-description-color;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .footerSection {
+        padding: 1rem;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .footer1 {
+            width: 100%;
+            margin-bottom: .8rem;
+        }
+
+        .footerTags {
+            flex-direction: column-reverse;
+
+            .footer2,
+            .footer3 {
+                margin-right: 0rem;
+                margin-bottom: .9rem;
+            }
+        }
+
+        img {
+            margin: 0px auto;
+        }
+    }
+
+    .footerCaption {
+        display: block;
+        text-align: center;
+
+        div {
+            margin-top: .9rem;
+        }
+    }
+}
+
+// Footer End

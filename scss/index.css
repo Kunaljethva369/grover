@@ -576,6 +576,7 @@ header {
 .appStoreSection .appStoreRightSide .ctaStore .appStore img,
 .appStoreSection .appStoreRightSide .ctaStore .playStore img {
   margin-right: 0.5rem;
+  width: 22px;
 }
 .appStoreSection .appStoreRightSide .ctaStore .appStore span,
 .appStoreSection .appStoreRightSide .ctaStore .playStore span {
@@ -585,6 +586,9 @@ header {
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .appStoreSection {
     padding: 2rem 1rem;
+  }
+  .appStoreSection .appStoreLeftSide img {
+    width: 200px;
   }
   .appStoreSection .appStoreLeftSide .homeHeading {
     font-size: 1.8rem;
@@ -601,6 +605,9 @@ header {
   .appStoreSection .appStoreLeftSide {
     width: 100%;
     order: 1;
+  }
+  .appStoreSection .appStoreLeftSide img {
+    width: 70px;
   }
   .appStoreSection .appStoreRightSide {
     width: 100%;
@@ -620,5 +627,77 @@ header {
   .appStoreSection .appStoreRightSide .ctaStore .appStore,
   .appStoreSection .appStoreRightSide .ctaStore .playStore {
     padding: 0.5rem 0.9rem;
+  }
+}
+.footerSection {
+  padding: 8rem 0rem 2rem 0rem;
+  align-items: flex-start;
+}
+.footerSection .footer1 {
+  width: 60%;
+}
+.footerSection .footer1 img {
+  width: 90px;
+  margin-bottom: 0.9rem;
+}
+.footerSection .footer1 p {
+  color: hsl(227, 12%, 61%);
+}
+.footerSection .footerTags {
+  width: 100%;
+  justify-content: center;
+}
+.footerSection .footerTags .footer2,
+.footerSection .footerTags .footer3 {
+  margin-right: 4rem;
+}
+.footerSection .footerTags ul {
+  list-style: none;
+}
+.footerSection .footerTags ul li {
+  color: hsl(227, 12%, 61%);
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.footerSection p {
+  color: hsl(227, 12%, 61%);
+  margin-top: 0.5rem;
+}
+
+.footerCaption {
+  padding: 0rem 0rem 2rem 0rem;
+  justify-content: space-between;
+}
+.footerCaption div {
+  color: hsl(227, 12%, 61%);
+}
+
+@media only screen and (max-width: 767px) {
+  .footerSection {
+    padding: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .footerSection .footer1 {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+  .footerSection .footerTags {
+    flex-direction: column-reverse;
+  }
+  .footerSection .footerTags .footer2,
+  .footerSection .footerTags .footer3 {
+    margin-right: 0rem;
+    margin-bottom: 0.9rem;
+  }
+  .footerSection img {
+    margin: 0px auto;
+  }
+  .footerCaption {
+    display: block;
+    text-align: center;
+  }
+  .footerCaption div {
+    margin-top: 0.9rem;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -10,6 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/scss/index.css">
     <link rel="icon" type="image/x-icon" href="/Assets/favicon.webp">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,7 +52,7 @@
     <main>
         <!-- Hero Section Starts -->
         <section class="hero container">
-            <div class="heroSection flex">
+            <div class="heroSection flex" data-aos="fade-right">
                 <div class="heroLeftSide">
                     <div class="heroTagLine flex">
                         <span>More than Faster</span>
@@ -81,7 +82,7 @@
 
         <!-- What we server Section Start -->
         <section class="server container">
-            <div class="serverSection">
+            <div class="serverSection" data-aos="fade-up">
                 <div class="serverHeading">
                     <p>what we server</p>
                     <h2>fruit and vegetable delivered to your home</h2>
@@ -127,7 +128,7 @@
 
         <!-- Why choose us Section Start -->
         <section class="chooseUs container">
-            <div class="chooseUsSection flex">
+            <div class="chooseUsSection flex" data-aos="flip-left">
                 <div class="chooseUsLeftSide">
                     <div class="chooseUsOrange flex">
                         <img src="/Assets/image and card.webp" class="womenorange">
@@ -150,7 +151,7 @@
 
         <!-- Home Delivary Section Start -->
         <section class="home container">
-            <div class="homeSection flex">
+            <div class="homeSection flex" data-aos="flip-right">
                 <div class="homeLeftSide">
                     <p class="homeTagline">HOME DELIVERY</p>
                     <h2 class="homeHeading">Sit at Home We Will Take Care Your Order</h2>
@@ -171,7 +172,7 @@
 
         <!-- App Store Section Start -->
         <section class="appStore container">
-            <div class="appStoreSection flex">
+            <div class="appStoreSection flex" data-aos="fade-zoom-in">
                 <div class="appStoreLeftSide">
                     <div class="homeOrange">
                         <img src="/Assets/mobile-mockup.webp" class="womenorange">
@@ -197,10 +198,64 @@
             </div>
         </section>
         <!-- App Store Section End -->
-
     </main>
 
+    <footer>
+        <div class="footer container">
+            <div class="footerSection flex">
+                <div class="footer1">
+                    <img src="/Assets/logo.webp">
+                    <p>Fast delivery, which is active all over the world, serves with many transportation vehicles.</p>
+                </div>
+                <div class="footerTags flex">
+                    <div class="footer2">
+                        <h2>Compnay</h2>
+                        <ul>
+                            <li>About Us</li>
+                            <li>Blog</li>
+                            <li>All Products</li>
+                            <li>Location Map</li>
+                        </ul>
+                    </div>
+                    <div class="footer3">
+                        <h2>Services</h2>
+                        <ul>
+                            <li>Order Tracking</li>
+                            <li>Wish List</li>
+                            <li>My account</li>
+                            <li>Terms & Conditions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer4">
+                    <h2>Get in Touch</h2>
+                    <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
+                </div>
+            </div>
+            <div class="footerCaption flex">
+                <div>
+                    All Rights Reserved @Kunal Jethva 2023
+                </div>
+                <div>
+                    Terms & Conditions
+                    Privacy & Policy
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
     <script src="/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+            easing: 'ease-in-quad',
+            delay: 100,
+            once:true,
+        });
+    </script>
 </body>
 
 </html>

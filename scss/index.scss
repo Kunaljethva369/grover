@@ -289,16 +289,8 @@ header {
         .heroBtn {
             margin-top: 3rem;
 
-            .firstbtn {
-                // @include button(#F55556, white);
-            }
-
             button:nth-child(2){
                 margin-left: 1.8rem;
-            }
-            .secondbtn {
-                // @include button(none, black);
-                // border: 1px solid #F55556;
             }
         }
     }
@@ -538,10 +530,6 @@ header {
             font-size: 20px;
             color: $primiary-description-color;
             margin-bottom: 1rem;
-        }
-
-        button {
-            // @include button(#F55556, white)
         }
     }
 }

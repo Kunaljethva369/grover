@@ -422,6 +422,7 @@ header {
   color: hsl(227, 12%, 61%);
   margin-bottom: 1rem;
 }
+
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .chooseUsSection {
     padding: 0rem 1rem;

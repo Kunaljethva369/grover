@@ -5,7 +5,7 @@ let ul = document.querySelector('.menu-items');
 hamburger.addEventListener('click', function () {
     menu.className == 'menu' ? menu.className = 'menu active' : menu.className = 'menu'
     menu.className == 'menu active' ? ul.className = 'flex menu-ul' : ul.className = 'flex menu-ul'
-    hamburger.childNodes[1].src == "https://grovers.netlify.app//Assets/cross.webp" ?
+    hamburger.childNodes[1].src == "https://grovers.netlify.app/Assets/cross.webp" ?
         hamburger.childNodes[1].src = "/Assets/hamburger.svg"
         :
         hamburger.childNodes[1].src = "https://grovers.netlify.app/Assets/cross.webp";

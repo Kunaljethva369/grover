@@ -72,7 +72,7 @@ $background-orange: hsl(12, 88%, 59%);
 $primiary-description-color: hsl(227, 12%, 61%);
 $font-family: 'Be Vietnam Pro', sans-serif;
 
-// Uitliy Class
+// Utility class Start
 
 .container {
     max-width: 1270px;
@@ -85,6 +85,36 @@ $font-family: 'Be Vietnam Pro', sans-serif;
     align-items: center;
 }
 
+.filledBtn{
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    background: #F55556;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+}
+
+.nonFilledBtn{
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    background: none;
+    border: none;
+    border-radius: .5rem;
+    color: black;
+    border: 1px solid #F55556;
+}
+
+.bgNone{
+    background: none !important;
+}
+
+@media only screen and (max-width:992px) {
+    .filledBtn,.nonFilledBtn{
+        padding: .9rem 1rem;
+    }
+}
+
+// Utility class End
 
 // Header Start
 header {
@@ -177,6 +207,7 @@ header {
 
         .menu.active {
             display: block;
+            position: absolute;
 
             .menu-ul {
                 position: fixed;
@@ -217,15 +248,6 @@ header {
 
 // Hero Start
 
-@mixin button($bgColor, $color) {
-    cursor: pointer;
-    padding: 1.2rem 2rem;
-    background: $bgColor;
-    border: none;
-    border-radius: .5rem;
-    color: $color;
-}
-
 .hero {
     padding-top: 8rem;
 
@@ -236,15 +258,13 @@ header {
             background: #FDECEC;
             border-radius: 23px;
             width: max-content;
-            padding: 0rem .4rem;
-
-            img {
-                height: 35px;
-            }
+            padding: 1rem;
+            align-items: flex-end;
 
             span {
                 font-size: .8rem;
                 color: #F55556;
+                margin-right: .5rem;
             }
         }
 
@@ -269,14 +289,8 @@ header {
         .heroBtn {
             margin-top: 3rem;
 
-            .firstbtn {
-                @include button(#F55556, white);
-            }
-
-            .secondbtn {
-                @include button(none, black);
+            button:nth-child(2){
                 margin-left: 1.8rem;
-                border: 1px solid #F55556;
             }
         }
     }
@@ -420,12 +434,12 @@ header {
         }
 
         .card-orange {
-            background-color: #FDECEC;
+            background-color: white;
             height: 300px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            border-radius: 0px 20px 20px 20px;
+            border-radius: 20px 20px 20px 20px;
             position: relative;
 
             &::after {
@@ -516,10 +530,6 @@ header {
             font-size: 20px;
             color: $primiary-description-color;
             margin-bottom: 1rem;
-        }
-
-        button {
-            @include button(#F55556, white)
         }
     }
 }
@@ -612,7 +622,7 @@ header {
         }
 
         button {
-            @include button(none, black);
+            // @include button(none, black);
             border: 1px solid #F55556;
         }
     }
@@ -712,10 +722,7 @@ header {
 
             .appStore,
             .playStore {
-                @include button(none, black);
                 border: 1px solid black;
-                border-radius: .5rem;
-
                 img {
                     margin-right: .5rem;
                     width: 22px;
@@ -784,6 +791,12 @@ header {
                 .appStore,
                 .playStore {
                     padding: 0.5rem 0.9rem;
+                    img{
+                        height: 20px;
+                    }
+                    span{
+                        font-size: 14px;
+                    }
                 }
             }
         }

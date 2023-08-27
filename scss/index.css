@@ -71,6 +71,34 @@ picture {
   align-items: center;
 }
 
+.filledBtn {
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background: #F55556;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.nonFilledBtn {
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  border: 1px solid #F55556;
+}
+
+.bgNone {
+  background: none !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .filledBtn, .nonFilledBtn {
+    padding: 0.9rem 1rem;
+  }
+}
 header {
   position: fixed;
   width: 100%;
@@ -144,6 +172,7 @@ header {
   }
   .nav .menu.active {
     display: block;
+    position: absolute;
   }
   .nav .menu.active .menu-ul {
     position: fixed;
@@ -181,14 +210,13 @@ header {
   border-radius: 23px;
   width: -moz-max-content;
   width: max-content;
-  padding: 0rem 0.4rem;
-}
-.hero .heroLeftSide .heroTagLine img {
-  height: 35px;
+  padding: 1rem;
+  align-items: flex-end;
 }
 .hero .heroLeftSide .heroTagLine span {
   font-size: 0.8rem;
   color: #F55556;
+  margin-right: 0.5rem;
 }
 .hero .heroLeftSide .mainHeading {
   font-size: 64px;
@@ -207,23 +235,8 @@ header {
 .hero .heroLeftSide .heroBtn {
   margin-top: 3rem;
 }
-.hero .heroLeftSide .heroBtn .firstbtn {
-  cursor: pointer;
-  padding: 1.2rem 2rem;
-  background: #F55556;
-  border: none;
-  border-radius: 0.5rem;
-  color: white;
-}
-.hero .heroLeftSide .heroBtn .secondbtn {
-  cursor: pointer;
-  padding: 1.2rem 2rem;
-  background: none;
-  border: none;
-  border-radius: 0.5rem;
-  color: black;
+.hero .heroLeftSide .heroBtn button:nth-child(2) {
   margin-left: 1.8rem;
-  border: 1px solid #F55556;
 }
 .hero .heroRightSide {
   width: 56%;
@@ -336,12 +349,12 @@ header {
   font-weight: 700;
 }
 .serverSection .serverCards .card-orange {
-  background-color: #FDECEC;
+  background-color: white;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 0px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
   position: relative;
 }
 .serverSection .serverCards .card-orange::after {
@@ -409,14 +422,6 @@ header {
   color: hsl(227, 12%, 61%);
   margin-bottom: 1rem;
 }
-.chooseUsSection .chooseUsRightSide button {
-  cursor: pointer;
-  padding: 1.2rem 2rem;
-  background: #F55556;
-  border: none;
-  border-radius: 0.5rem;
-  color: white;
-}
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .chooseUsSection {
@@ -483,12 +488,6 @@ header {
   margin-bottom: 1rem;
 }
 .homeSection .homeLeftSide button {
-  cursor: pointer;
-  padding: 1.2rem 2rem;
-  background: none;
-  border: none;
-  border-radius: 0.5rem;
-  color: black;
   border: 1px solid #F55556;
 }
 
@@ -564,14 +563,7 @@ header {
 }
 .appStoreSection .appStoreRightSide .ctaStore .appStore,
 .appStoreSection .appStoreRightSide .ctaStore .playStore {
-  cursor: pointer;
-  padding: 1.2rem 2rem;
-  background: none;
-  border: none;
-  border-radius: 0.5rem;
-  color: black;
   border: 1px solid black;
-  border-radius: 0.5rem;
 }
 .appStoreSection .appStoreRightSide .ctaStore .appStore img,
 .appStoreSection .appStoreRightSide .ctaStore .playStore img {
@@ -627,6 +619,14 @@ header {
   .appStoreSection .appStoreRightSide .ctaStore .appStore,
   .appStoreSection .appStoreRightSide .ctaStore .playStore {
     padding: 0.5rem 0.9rem;
+  }
+  .appStoreSection .appStoreRightSide .ctaStore .appStore img,
+  .appStoreSection .appStoreRightSide .ctaStore .playStore img {
+    height: 20px;
+  }
+  .appStoreSection .appStoreRightSide .ctaStore .appStore span,
+  .appStoreSection .appStoreRightSide .ctaStore .playStore span {
+    font-size: 14px;
   }
 }
 .footerSection {

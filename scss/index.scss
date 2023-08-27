@@ -185,7 +185,7 @@ header {
                 flex-direction: column;
                 transform: translate(-50%, -45%);
                 text-align: center;
-                background-color: rgba(61, 61, 61, 0.8);
+                background-color: rgba(61, 61, 61, 1);
                 padding: 4rem;
                 height: 100vh;
                 width: 100%;
@@ -859,8 +859,9 @@ header {
         }
 
         .footerTags {
-            flex-direction: column-reverse;
-
+            flex-direction:  row-reverse;
+            gap: 30px;
+            margin-bottom: .5rem;
             .footer2,
             .footer3 {
                 margin-right: 0rem;

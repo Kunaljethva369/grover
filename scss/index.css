@@ -152,7 +152,7 @@ header {
     flex-direction: column;
     transform: translate(-50%, -45%);
     text-align: center;
-    background-color: rgba(61, 61, 61, 0.8);
+    background-color: rgb(61, 61, 61);
     padding: 4rem;
     height: 100vh;
     width: 100%;
@@ -683,7 +683,9 @@ header {
     margin-bottom: 0.8rem;
   }
   .footerSection .footerTags {
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
+    gap: 30px;
+    margin-bottom: 0.5rem;
   }
   .footerSection .footerTags .footer2,
   .footerSection .footerTags .footer3 {
